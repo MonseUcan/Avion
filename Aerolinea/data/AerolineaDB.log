@@ -1,0 +1,5 @@
+/*C3*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C4*/SET SCHEMA PUBLIC
+create table Aerolinea.Persona (oid varchar(32) not null, apellido varchar(32), calle varchar(32), colonia varchar(32), estado varchar(32), municipio varchar(32), fotos varchar(32), nombre varchar(32), pais_oid varchar(32), primary key (oid))
+alter table Aerolinea.Persona add constraint FK4re53qjxgis3ote9m2jhcso3b foreign key (pais_oid) references Aerolinea.Pais
