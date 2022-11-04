@@ -1,5 +1,26 @@
 /*C3*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C4*/SET SCHEMA PUBLIC
-create table Aerolinea.Persona (oid varchar(32) not null, apellido varchar(32), calle varchar(32), colonia varchar(32), estado varchar(32), municipio varchar(32), fotos varchar(32), nombre varchar(32), pais_oid varchar(32), primary key (oid))
-alter table Aerolinea.Persona add constraint FK4re53qjxgis3ote9m2jhcso3b foreign key (pais_oid) references Aerolinea.Pais
+/*C4*/SET SCHEMA AEROLINEA
+INSERT INTO AEROLINEA VALUES('ff808081841ed47a01841ed520d10000','Citly')
+COMMIT
+INSERT INTO AEROLINEA VALUES('ff808081841ed47a01841ed54c180001','Estandar')
+COMMIT
+INSERT INTO EMPLEADO VALUES('ff808081841ed47a01841ed6965a0002','mex','1ED5C4307F00000100000000172B7F8F','glenda','402881dc841ebaa701841ec1ab4e0000','calle 75 /32 y 34a','Viva','Quintana Roo','Felipe Carrillo Puerto')
+COMMIT
+INSERT INTO PAIS VALUES('ff808081841ed47a01841ed6d2590003','Jap\u00f3n')
+COMMIT
+INSERT INTO PAIS VALUES('ff808081841ed47a01841ed6ea150004','Korea')
+COMMIT
+INSERT INTO PAIS VALUES('ff808081841ed47a01841ed703e50005','Estados Unidos')
+COMMIT
+INSERT INTO PAIS VALUES('ff808081841ed47a01841ed7348e0006','Colombia')
+COMMIT
+INSERT INTO PAIS VALUES('ff808081841ed47a01841ed75a2a0007','Australia')
+COMMIT
+INSERT INTO PERSONA VALUES('ff808081841ed47a01841ed98eb50008','Mex','calle 75 entre 32 y 34 a','viva','Quintana roo','carrillo puerto','1ED8E9D87F00000100000000E4232EE2','Karina',NULL)
+COMMIT
+INSERT INTO TRIPULACION VALUES('ff808081841ed47a01841ed9e74d0009','M\u00e9xicanos','ff808081841ed47a01841ed54c180001','402881dc841ebaa701841ec1ab4e0000')
+COMMIT
+DELETE FROM EMPLEADO WHERE OID='402881dc841ebaa701841ec244070001'
+INSERT INTO EMPLEADO VALUES('402881dc841ebaa701841ec244070001','toxqui','1EC2E7CEC0A8015C00000000D6D99F72','citly','402881dc841ebaa701841ec1ab4e0000','calle 75 entre 32 y 34a','Viva','Quintana roo','Felipe Carrillo puerto')
+COMMIT
